@@ -8,9 +8,6 @@ import CompararProdutos    from '../components/CompararProdutos';
 import BreadcrumbCategoria from '../components/BreadcrumbCategoria';
 
 
-
-
-
 export async function lerProdutosDoXML2() {
   const xmlPath = path.join(process.cwd(), 'data/cupons/RakutenResponse.xml');
   const xmlData = fs.readFileSync(xmlPath, 'utf8');
