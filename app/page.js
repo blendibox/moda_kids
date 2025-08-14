@@ -45,8 +45,8 @@ export default async function Home() {
   const produtos2 = await lerProdutosDoXML2();
 
   return (
+  <>
    <div className="max-w-7xl mx-auto px-4">
-
     <div className="m-6 items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <div className="items-center gap-8 rounded-lg bg-white p-6 shadow-md">
 	  
@@ -69,5 +69,6 @@ export default async function Home() {
       </div>
     </div>
 	</div>
+	</>
   );
 }

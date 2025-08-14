@@ -8,8 +8,9 @@ if (fs.existsSync(dataDir)) {
   const files = fs.readdirSync(dataDir);
   // continue processing files
 } else {
-  console.warn(`Directory ${dataDir} does not exist. Skipping...`);
-  // Optionally, create the directory with fs.mkdirSync(dataDir, { recursive: true });
+  //console.warn(`Directory ${dataDir} does not exist. Skipping...`);
+  //  create the directory
+  fs.mkdirSync(dataDir, { recursive: true });
 }
 
 const pastaOrigem = path.join(process.cwd(), 'public', 'data');
