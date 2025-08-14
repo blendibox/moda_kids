@@ -40,7 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-/data/awin
+/data/awin/*.jsonl
+/data/awin/*.json
 /data/slugs
 /data/slugs-lotes
 data/DAFITI.xml
