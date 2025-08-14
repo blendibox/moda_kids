@@ -19,28 +19,27 @@ export async function generateStaticParams() {
     return [{ slug: '__dummy__' }];
   }
 
+
+  const slugsProduto = [];
+  
   const linhas = fs.readFileSync(indexPath, 'utf8').split('\n');
-  const validSlugs = [];
-  const lote = process.env.LOTE || null;
+  const slugs = [];
 
   for (const linha of linhas) {
-    if (!linha.trim()) continue;
+    if (!linha.trim()) continue; // Ignora linhas vazias
     try {
+		
       const obj = JSON.parse(linha);
       if (obj.slug) {
-        const produto = await lerProdutoPorSlug(obj.slug, 'DAFITI2', lote);
-        if (produto) {
-          validSlugs.push({ slug: obj.slug });
-        } else {
-          console.warn(`⚠️ Produto não encontrado para slug: ${obj.slug}`);
-        }
+        slugs.push({ slug: obj.slug });
       }
     } catch (e) {
       console.warn(`❌ Erro ao parsear linha: ${linha}`);
     }
   }
 
-  return validSlugs.length > 0 ? validSlugs : [{ slug: '__dummy__' }];
+  return slugs;
+ 
 }
 
 export async function generateMetadata({ params }) {
