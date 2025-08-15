@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /
+
+
+
+# Sitemaps
+Sitemap: https://modakids.blendibox.com.br/sitemap.xml

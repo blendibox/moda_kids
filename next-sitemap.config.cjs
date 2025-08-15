@@ -3,6 +3,10 @@ module.exports = {
   siteUrl:  'https://modakids.blendibox.com.br',
   generateRobotsTxt: false,
   sitemapSize: 5000,
+   exclude: [
+	  "/404",
+	  "/*/__dummy__"
+	],
   outDir: './out',
   robotsTxtOptions: {
     policies: [

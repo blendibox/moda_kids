@@ -25,10 +25,11 @@
     "build-slugs:quebrar": " node scripts/quebrarSlugsPorMarca.js",
     "build-slugs": "npm run build:cuponsawin && npm run build-slugs:gerar && npm run build-slugs:quebrar ",
     "build-sitemap": "npx next-sitemap --config next-sitemap.config.cjs",
+	"build-sitemap:new": " node scripts/generateSitemaps.js",
     "dev": "next dev --turbopack",
     "split:xml": "node scripts/splitXml.js data/DAFITI.xml",
     "prod": "serve out",
-    "build": "npm run build-xml-to-json && npm run build-slugs && npm run categorias && next build && npm run build:all && npm run merge:all   && npm run build-sitemap && npm run build-feed",
+    "build": "npm run build-xml-to-json && npm run build-slugs && npm run categorias && next build && npm run build:all && npm run merge:all   && npm run build-sitemap:new && npm run build-feed",
     "build-feed": " node scripts/gerarFeed.js",
     "start": "next start",
     "lint": "next lint"
