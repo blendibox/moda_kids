@@ -73,7 +73,7 @@ export default function ProdutoAwin(props) {
 			className="inline-block mt-4  px-4 py-2 rounded underline decoration-emerald-500"
 			title={'Clique e vá para a loja da Marca ' + produto['brand']?.['brandName']  + ' na ' +   mybrand}
 		  >
-		 <b>{ mybrand || produto['brand']?.['brandName'] }</b>
+		 <b>{  produto['brand']?.['brandName'] ||  mybrand }</b>
 
           </Link>		 
 		  </h2>
@@ -98,7 +98,7 @@ export default function ProdutoAwin(props) {
         href={produto['uri']?.['awTrack']}
         className="inline-block mt-4 bg-emerald-600 text-white px-4 py-2 rounded text-xl"
       >
-        Comprar  no site { mybrand }
+        Comprar  na loja {produto['brand']?.['brandName'] ||  mybrand }
       </Link>
 	 
 	  <hr className=" mt-12 "/>
