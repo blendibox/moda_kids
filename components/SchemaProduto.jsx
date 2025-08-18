@@ -22,7 +22,7 @@ export default function SchemaProduto({ title, image, link, brand, priceGoogle }
         "name": "Blendibox",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://comprar.blendibox.com.br/favicon.ico",
+          "url": "https://modakids.blendibox.com.br/favicon.ico",
           "width": 40,
           "height": 40,
         },
